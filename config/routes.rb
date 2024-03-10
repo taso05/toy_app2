@@ -1,6 +1,5 @@
-class ApplicationController < ActionController::Base
-
-  def hello
-    render html: "hello, world!"
-  end
+Rails.application.routes.draw do
+  resources :microposts
+  resources :users
+  root 'users#index'
 end
